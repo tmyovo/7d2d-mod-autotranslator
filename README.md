@@ -1,12 +1,14 @@
-# SevenDaysLocalizer
+# 7d2d Mod Auto Translator
 
-七日杀（7 Days to Die）Mod 自动汉化工具。
+七日杀（7 Days to Die）Mod 自动汉化工具，支持 AI 批量翻译 `Localization.csv` / `Localization.txt`。
 
-SevenDaysLocalizer 是一个基于 Wails 的桌面端开源工具，用于读取 7 Days to Die Mod 或游戏目录中的 `Localization.csv` / `Localization.txt`，通过兼容 OpenAI Chat Completions 格式的 AI 接口批量生成简体中文翻译，并写回 `schinese` 列。
+7d2d Mod Auto Translator 是一个基于 Wails 的桌面端开源工具，面向 7 Days to Die Mod 汉化场景。它可以读取**单个已下载 Mod 目录**中的 `Localization.csv` / `Localization.txt`，通过兼容 OpenAI Chat Completions 格式的 AI 接口批量生成简体中文翻译，并写回 `schinese` 列。
+
+> 目录选择说明：请选择某一个具体 Mod 的根目录，通常是包含 `Config` 文件夹的那个目录；也可以直接选择 `Localization.csv` / `Localization.txt` 文件。不要选择游戏的整个 `Mods` 汇总目录。
 
 ## 功能特性
 
-- 支持选择或拖拽 Mod / 游戏目录，也支持直接选择 `Localization.csv` / `Localization.txt`。
+- 支持选择或拖拽单个 Mod 目录，也支持直接选择 `Localization.csv` / `Localization.txt`。
 - 自动查找常见本地化文件：
   - `Config/Localization.csv`
   - `Config/Localization.txt`
@@ -32,15 +34,15 @@ SevenDaysLocalizer 是一个基于 Wails 的桌面端开源工具，用于读取
 推荐普通用户直接下载 Release 中的 Windows 可执行文件：
 
 1. 打开项目右侧或顶部的 **Releases**。
-2. 下载最新版本中的 `SevenDaysLocalizer.exe`。
+2. 下载最新版本中的 `SevenDaysLocalizer-windows-amd64.exe`。
 3. 双击运行。
 
 > 如果 Windows 提示未知发布者，这是因为当前项目没有商业代码签名证书。可在确认来源后选择继续运行。
 
 ## 使用流程
 
-1. 启动 `SevenDaysLocalizer.exe`。
-2. 点击“选择目录”，选择 7 Days to Die Mod 目录或游戏目录；也可以直接拖入目录或 Localization 文件。
+1. 启动 `SevenDaysLocalizer-windows-amd64.exe`。
+2. 点击“选择目录”，选择某一个已下载 Mod 的根目录，例如包含 `Config` 文件夹的目录；也可以直接拖入该 Mod 目录或 Localization 文件。
 3. 填写 AI 接口配置：
    - `Base URL`：例如 `https://api.example.com`
    - `API Key`：你的接口密钥
@@ -53,6 +55,7 @@ SevenDaysLocalizer 是一个基于 Wails 的桌面端开源工具，用于读取
 
 ## 注意事项
 
+- 请处理单个 Mod 目录，不要直接选择整个 `Mods` 汇总目录；如果要汉化多个 Mod，请分别加载每个 Mod。
 - 工具会直接修改当前加载的 `Localization.csv` / `Localization.txt`，首次使用前建议自行备份 Mod。
 - 保存格式统一为 UTF-8 BOM，以兼容 7 Days to Die 的本地化文件读取习惯。
 - `.txt` 本地化文件在很多 Mod 中本质仍是 CSV 结构，因此本工具按 CSV 规则解析和保存。

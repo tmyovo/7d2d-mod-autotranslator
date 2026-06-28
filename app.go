@@ -16,6 +16,6 @@ func (a *App) startup(ctx context.Context) {
 
 func (a *App) ChooseFolder() (string, error) {
 	return runtime.OpenDirectoryDialog(a.ctx, runtime.OpenDialogOptions{
-		Title: "选择 7 Days to Die Mod 或游戏目录",
+		Title: "选择单个 7 Days to Die Mod 目录",
 	})
 }

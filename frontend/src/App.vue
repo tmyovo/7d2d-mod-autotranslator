@@ -299,7 +299,7 @@ async function chooseFolder() {
 
 async function loadLocalization() {
   if (!path.value.trim()) {
-    message.warning('请先选择或输入 Mod/游戏目录，或 Localization 文件路径')
+    message.warning('请先选择单个 Mod 目录，或输入 Localization 文件路径')
     return
   }
   loadingFile.value = true
@@ -509,7 +509,7 @@ function tagText(row: Row) {
                 v-model:value="path"
                 size="large"
                 enter-button="加载"
-                placeholder="拖入 Mod/游戏目录，或输入 Localization.csv / Localization.txt 路径"
+                placeholder="拖入单个 Mod 目录，或输入 Localization.csv / Localization.txt 路径"
                 :loading="loadingFile"
                 @search="loadLocalization"
               />
@@ -519,10 +519,10 @@ function tagText(row: Row) {
               </a-button>
               <a-button type="primary" size="large" :loading="loadingFile" @click="chooseFolder">
                 <template #icon><FolderOpenOutlined /></template>
-                选择目录
+                选择 Mod 目录
               </a-button>
             </div>
-            <div class="drop-hint">将需要汉化的mod拖动到此处</div>
+            <div class="drop-hint">将需要汉化的单个 Mod 目录拖动到此处，不要选择整个 Mods 汇总目录</div>
           </a-card>
         </a-col>
 
