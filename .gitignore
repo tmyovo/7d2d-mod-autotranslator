@@ -1,0 +1,25 @@
+# Build outputs
+/build/bin/
+/frontend/dist/
+
+# Dependencies
+/frontend/node_modules/
+
+# Wails generated cache
+/frontend/package.json.md5
+
+# Local runtime/config files
+/.env
+/.env.*
+*.local
+
+# User-provided localization data and backups
+/Localization.csv
+/Localization.txt
+*.bak
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.exe~

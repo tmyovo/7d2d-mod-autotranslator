@@ -1,0 +1,199 @@
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+html {
+  background: #eef2f7;
+}
+
+body {
+  margin: 0;
+  color: #172033;
+  font-family:
+    Inter,
+    "Segoe UI",
+    "Microsoft YaHei",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 14px;
+  background:
+    radial-gradient(circle at top left, rgba(22, 119, 255, 0.14), transparent 30%),
+    linear-gradient(180deg, #f7f9fc 0%, #edf2f7 100%);
+}
+
+.drop-card {
+  border: 1px dashed #91caff;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.path-row {
+  display: flex;
+  gap: 10px;
+}
+
+.path-row .ant-input-search {
+  flex: 1 1 auto;
+  min-width: 240px;
+}
+
+.drop-card .ant-card-body,
+.compact-card .ant-card-body {
+  padding: 14px;
+}
+
+.compact-card .ant-card-head {
+  min-height: 42px;
+}
+
+.compact-card .ant-card-head-title {
+  padding: 10px 0;
+}
+
+.compact-card .ant-form-item {
+  margin-bottom: 10px;
+}
+
+.drop-hint {
+  margin-top: 6px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.form-help {
+  margin: -2px 0 10px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.inline-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.inline-options > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.option-label {
+  color: #475467;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(80px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.metric-row .ant-statistic-title {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.metric-row .ant-statistic-content {
+  font-size: 20px;
+}
+
+.progress-detail {
+  margin: 8px 0 10px;
+  color: #475467;
+  line-height: 1.7;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.muted {
+  color: #667085;
+  font-size: 13px;
+}
+
+.cell-text {
+  max-height: 92px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.55;
+}
+
+.source-text {
+  color: #344054;
+}
+
+.target-text {
+  min-height: 24px;
+  padding: 4px 6px;
+  color: #175cd3;
+  background: #f8fbff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: text;
+}
+
+.target-text:hover {
+  border-color: #91caff;
+  background: #eef6ff;
+}
+
+.editor-textarea {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.ant-card {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.ant-row {
+  row-gap: 12px !important;
+}
+
+.ant-table-cell {
+  vertical-align: top;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .path-row {
+    flex-direction: column;
+  }
+
+  .metric-row {
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+  }
+}
